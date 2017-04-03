@@ -1,0 +1,111 @@
+<DOCTYPE! html>
+
+<head>
+<title>SmartHack - ASMI project</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link type="text/css" href="stylemobile.css" rel="stylesheet" media="screen and (max-width:925px)">
+<script src="scripts/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Sorin Marica">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Quicksand|Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<div id="top">
+	<header>
+	<img src="images/smarthack.png" alt="smarthack">
+	</header>
+
+	<nav>
+	<ul>
+		<li><a href="#home">Acasa</a></li>
+		<li><a href="#despre">Despre</a></li>
+		<li><a href="#inscriere">Inscriere</a></li>
+		<li><a href="#parteneri">Parteneri</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+	</nav>
+</div>
+
+<section id="home">
+	<div id="welcome">
+	<img src="images/shwhite.png" style="height:20vh">
+	</div>
+	<div align="center">
+	<a href="#inscriere"><div id="butoninscriere">Inscrie-te acum!</div></a>
+	</div>
+</section>
+
+<section id="despre">
+<h1>Despre</h1>
+<div>
+
+SmartHack este  un eveniment de tip hackathon adresat studenților din facultățile de profil din București (Informatică, Cibernetică, Electronică, Automatică și Calculatoare, Tehnologia Informației) în care odată cu anunțarea temei echipele au la dispoziție 24 de ore pentru a realiza o aplicație pe baza acesteia.
+<br>
+Studenții se pot înscrie cu echipe între 2 și 4 membri. Premiul acordat câștigătorilor este de 1000 de euro, iar CST ofera un premiu special echipei preferate în valoare de 500 de euro!
+<ol><li>Înscrierile au loc între  3 și 15 octombrie, unde echipele vor fi alese pe baza formularelor de înscriere trimise.
+</li><li>
+Unul dintre membrii echipei va participa la un training de Presentantion Skills pe 21 octombrie, valorificând cunoștințele dobândite în etapa finală SmartHack.
+</li><li>
+Între 22 și 23 octombrie, echipele au la dispoziție 24 de ore pentru a concepe o aplicație pe baza temei alese.
+</li><li>
+În cadrul finalei participanții își vor prezenta ideile în fața unui juriu care va desemna aplicațiile câștigătoare!
+</li>
+</ol>
+</div>
+</section>
+
+<section id="inscriere">
+<div>
+<h1>Inscriere</h1>
+<div class="regb"><label for="inputnume">Nume echipa:</label><br><input type="text" id="inputnume" name="nume" value="Nume" onblur="fillField(this,'Nume');" onfocus="clearField(this,'Nume');"></div>
+<div class="regb"><label for="inputnumar">Numar participanti:</label><br><select name="numar" id="inputnumar"><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div>
+<div class="regb"><label for="facultate">Universitatea/Facultatea de provenienta a participantilor:</label><br><input id="facultate" type="text" name="facultate"></div>
+<div class="regb"><label for="reprezentant">Nume si prenume reprezentant:</label><br><input id="reprezentant" type="text" name="reprezentant" value="Nume si prenume reprezentant" onblur="fillField(this,'Nume si prenume reprezentant');" onfocus="clearField(this,'Nume si prenume reprezentant');"></div>
+<div class="regb"><label for="numar">Numarul de telefon al reprezentantului:</label><br><input id="numar" type="text" name="numar" value="+40"  onblur="fillField(this,'+40');" onfocus="clearField(this,'+40');"></div>
+<div class="regb"><label for="mailreprezentant">Adresa de mail a reprezentantului:</label><br><input id="mailreprezentant" type="mail" name="mail" value="Adresa de e-mail" onblur="fillField(this,'Adresa de e-mail');" onfocus="clearField(this,'Adresa de e-mail');"></div>
+<div class="regb"><label for="textnumepart">Nume si prenume participanti:</label><br><textarea id="numesiprenumepart" rows="3" cols="25" id="textnumepart" name="textnumepart">Despartite cu virgula intre ele</textarea></div>
+<div class="regb"><label for="participare">Ati mai participat la alte hackathoane?</label><br><div id="participare"><div class="opt"><input type="radio" value="da" onclick="showparticipare()" class="radioinp" name="radioinp">Da</div><div class="opt"><input type="radio" name="radioinp" class="radioinp" onclick="hideparticipare()" value="nu" checked>Nu</div></div>
+<div id="rezultatee" style="visibility:hidden;"><label for="rezultate">Ce rezultate ati obtinut la hackathoane?</label><br><textarea name="rezultate" id="rezultate"></textarea></div></div>
+<div class="regb"><label for="limbaje">Limbaje de programare cunoscute:</label><br><textarea name="limbaje" id="limbaje"></textarea></div>
+<div class="regb"><label for="motivatie">De ce ati ales sa participati la acest hackathon?</label><br><textarea name="motivatie" id="motivatie"></textarea></div>
+<input type="button" id="regbutton" value="Trimite" class="send" onclick="register()">
+<p id="rezultatinregistrare"></p>
+</div>
+</section>
+
+<section id="parteneri">
+<div>
+<h1>Parteneri</h1>
+<img class="parteneri" src="images/parteneri.png" alt="Partener 1" id="partimg">
+</div>
+</section>
+
+<section id="contact">
+<div>
+<h1>Contact</h1>
+<div class="regc"><input type="text" name="numecontact" value="Nume" onblur="fillField(this,'Nume');" onfocus="clearField(this,'Nume');"></div>
+<div class="regc"><input type="mail" name="mailcontact" value="Adresa de e-mail" onblur="fillField(this,'Adresa de e-mail');" onfocus="clearField(this,'Adresa de e-mail');"></div>
+<div class="regc"><input type="text" name="subiectcontact" value="Subiect" onblur="fillField(this,'Subiect');" onfocus="clearField(this,'Subiect');"></div>
+<div class="regc"><textarea name="mesajcontact" >Mesaj</textarea></div>
+<div class="regc"><input type="submit" value="Trimite" class="send" onclick="contact()"></div>
+<p id="rezultatcontact"></p>
+</div>
+</section>
+
+</body>
+
+</html>

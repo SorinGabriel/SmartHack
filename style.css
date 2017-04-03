@@ -1,0 +1,411 @@
+/* smarthack design 1.0 */
+
+	body
+	{
+		margin:0;
+	}
+
+	#top
+	{
+		background-color:white;
+		color:black;
+		position:fixed;
+		height:90px;
+		width:100%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+	}
+	
+	#top header
+	{
+		vertical-align:top;
+		width:30%;
+		text-align:center;
+	}
+	
+	#top nav
+	{
+		height:100%;
+		width:69%;
+		text-align:center;
+	}
+	
+	#top nav ul
+	{
+		margin-top:30px;
+		margin-left:0;
+	}
+	
+	#top header img
+	{
+		height:100%;
+	}
+	
+	#top nav,header
+	{
+		display:inline-block;
+	}
+	
+	@keyframes menu {
+	from
+	{
+		opacity:0;
+	}
+	to
+	{
+		opacity:1;
+	}
+	}
+	
+	#top nav ul li a
+	{
+		font-family:Roboto;
+		font-size:20px;
+		text-decoration:underline;
+		color:black;
+		animation-name:menu;
+		animation-duration:5s;
+		-webkit-transition: all 0.5s ease;
+	}
+	
+	#top nav ul li a:hover
+	{
+		text-shadow:1px 1px 5px rgba(0,0,0);
+		font-weight:bolder;
+		color:white;
+		border-radius:20px;
+		background-color:black;
+		padding:20px;
+	}
+	
+	#top nav ul li
+	{
+		display:inline-block;
+		width:18%;
+		color:black;
+		text-align:left;
+	}
+	
+	section
+	{
+		padding-top:10%;
+		height:100vh;
+	}
+	
+	#home
+	{
+		padding-top:10%;
+		width:100%;
+		height:100vh;
+		text-align:center;
+		background-image:url("images/background1.jpg");
+	}
+	
+	@keyframes firsttext {
+	from
+	{
+		margin-left:10%;
+		opacity:0.2;
+	}
+	to
+	{
+		margin-left:30%;
+		opacity:1;
+	}
+	}
+	
+	#welcome
+	{
+		text-align:center;
+		margin-left:30%;
+		width:40%;
+		color:white;
+		margin-top:5%;
+		font-family:Quicksand;
+		animation-name:firsttext;
+		animation-duration:1s;
+		font-size:30px;
+		text-shadow:1px 1px 5px black;
+	}
+	
+	#butoninscriere
+	{
+		font-size:2em;
+		font-family:Montserrat;
+		text-decoration:none;
+		width:15%;
+		text-align:center;
+		padding:1em;
+		margin-top:20px;
+		border:5px solid black;
+		border-radius:15px;
+		transition:font-size 1s;
+	}
+	
+	#home a
+	{
+		color:white;
+		text-decoration:none;
+	}
+	
+	#butoninscriere:hover
+	{
+		font-size:2.5em;
+		transition:all 1s;
+	}
+
+	#despre 
+	{
+		font-family:Roboto;
+		padding-left:10%;
+		padding-right:10%;
+		background-image:url("images/background3.jpg");
+	}
+	
+	#despre h1
+	{
+		font-size:48px;
+		font-family:Montserrat;
+		margin-top:15px;
+	}
+	
+	#despre div
+	{
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		-moz-column-count: 2; /* Firefox */
+		column-count: 2;
+	}
+	
+	#inscriere
+	{
+		text-align:center;
+		height:120vh;
+		font-family:quicksand;
+		color:white;
+		padding-left:20%;
+		padding-right:20%;
+		/*
+background: #45484d; 
+background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%);
+background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); 
+background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); */
+	background-image:url('images/backgroundinscriere.jpg');
+	}
+	
+	#numesiprenumepart
+	{
+		height:17vh;
+	}
+	
+	#inscriere h1
+	{
+		margin-top:-2%;
+		text-align:center;
+		font-size:3em;
+	}
+	
+	.regc input
+	{
+		width:100%;
+		font-family:quicksand;
+		font-size:1.2em;
+		height:8vh;
+		margin-bottom:3vh;
+		text-align:center;
+		border:5px solid black;
+		border-radius:1em;
+	}
+	
+	.regc input:focus
+	{
+		opacity:0.5;
+		background-color:#061737;
+		color:white;
+		transition:all 1s;
+	}
+	
+	.regc textarea
+	{
+		width:100%;
+		font-family:quicksand;
+		font-size:1.2em;
+		height:20vh;
+		overflow:auto;
+		padding:2%;
+		margin-bottom:5vh;
+		text-align:center;
+		border-radius:1em;
+		border:5px solid black;
+	}
+	
+	.regc textarea:focus
+	{
+		opacity:0.5;
+		background-color:#061737;
+		color:white;
+		transition:all 1s;
+	}	
+	
+	.regb
+	{
+		vertical-align:top;
+		width:49%;
+		display:inline-block;
+		text-align:center;
+	}
+	
+	.regb input
+	{
+		width:100%;
+		font-family:quicksand;
+		font-size:1.2em;
+		height:8vh;
+		margin-bottom:1vh;
+		text-align:center;
+		border:5px solid black;
+		border-radius:1em;
+	}
+	
+	#regbutton
+	{
+		width:80%;
+		font-family:quicksand;
+		font-size:1.2em;
+		height:8vh;
+		margin-bottom:1vh;
+		text-align:center;
+		border:5px solid black;
+		border-radius:1em;
+	}
+	
+	#regbutton:focus
+	{
+		opacity:0.5;
+		background-color:#061737;
+		color:white;
+		transition:all 1s;
+	}
+	
+	.regb .radioinp
+	{
+		width:auto;
+		height:auto;
+		margin-bottom:0;
+		border:0px none black;
+		border-radius:0;
+	}
+	
+	.regb select
+	{
+		width:100%;
+		font-family:quicksand;
+		font-size:1.2em;
+		height:8vh;
+		margin-bottom:1vh;
+		text-align:center;
+		border:5px solid black;
+		border-radius:1em;
+	}
+	
+	.regb input:focus
+	{
+		opacity:0.5;
+		background-color:#061737;
+		color:white;
+		transition:all 1s;
+	}
+	
+	.send:hover
+	{
+		opacity:0.7;
+		background-color:#1C62EE;
+		transition:all 1s;
+	}
+	
+	#parteneri
+	{
+		margin-top:-10%;
+		color:white;
+		background-image:url("images/background2.jpg");
+		text-align:center;
+	}
+	
+	#parteneri h1
+	{
+		font-size:3em;
+		font-family:Montserrat;
+	}
+	
+	#contact
+	{
+		font-family:quicksand;
+		padding-left:30%;
+		padding-right:30%;
+		background-image:url('images/backgroundcontact.jpg');
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	
+	#contact h1
+	{
+		margin-top:-5vh;
+		text-align:center;
+		font-size:3em;
+	}
+	
+	.regb textarea
+	{
+		width:100%;
+		font-family:quicksand;
+		font-size:1.2em;
+		height:10vh;
+		overflow:auto;
+		padding:2%;
+		margin-bottom:1vh;
+		text-align:center;
+		border-radius:1em;
+		border:5px solid black;
+	}
+	
+	.regb textarea:focus
+	{
+		opacity:0.5;
+		background-color:#061737;
+		color:white;
+		transition:all 1s;
+	}	
+	
+	#partimg
+	{
+		height:60vh;
+	}
+	
+	#rezultatinscriere
+	{
+		text-align:center;
+	}
+	
+	#parteneri table
+	{
+		padding-left:20%;
+		padding-right:20%;
+		color:white;
+		border:2px solid black;
+	}
+	
+	#parteneri table tr 
+	{
+		border:2px solid black;
+	}
+	
+	#parteneri table td
+	{
+		border:2px solid black;
+		padding:10px;
+	}
